@@ -1,29 +1,19 @@
 UDP Samplicator
 ===============
 
-This small program receives UDP datagrams on a given port, and resends
-those datagrams to a specified set of receivers.  In addition, a
-sampling divisor N may be specified individually for each receiver,
-which will then only receive one in N of the received packets.
+This is a fork of https://github.com/sleinen/samplicator where I have made a dockerized version of the program based on Alpine.
 
-DOWNLOADING
------------
+This small program receives UDP datagrams on a given port, and resends those datagrams to a specified set of receivers. In addition, a sampling divisor N may be specified individually for each receiver, which will then only receive one in N of the received packets.
 
-This package is distributed under
-	https://github.com/sleinen/samplicator/
-
-INSTALLATION
+Installation
 ------------
-
-See [INSTALL.md](INSTALL.md).
-
-AUTHORS
--------
-
-See the `AUTHORS` file.
+This fork consists of the original files + Dockerfile, docker-compose.yml and samplicate.sh. The latter 3 files are the only on necessary to run it.
 
 USAGE
 -----
+First edit samplicate.sh according to your needs (examples in file) and edit the Dockerfile or docker-compose.yml to map samplicate.sh to where you placed it (see Dockerfile or docker-compose.yml). Please note that it is necessary to use the -f (fork) switch in each command if you are going to use multiple commands. Optionally you may map a config file also, and run that.
+
+
 
 The usage convention for the program is
 
