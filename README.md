@@ -5,7 +5,7 @@ This is a fork of https://github.com/sleinen/samplicator where I have made a doc
 
 This small program receives UDP datagrams on a given port, and resends those datagrams to a specified set of receivers. In addition, a sampling divisor N may be specified individually for each receiver, which will then only receive one in N of the received packets.
 
-Installation
+INSTALLATION
 ------------
 This fork consists of the original files + Dockerfile, docker-compose.yml and samplicate-run.sh. The latter 3 files are the only on necessary to run it.
 
