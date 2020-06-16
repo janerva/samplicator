@@ -7,11 +7,11 @@ This small program receives UDP datagrams on a given port, and resends those dat
 
 Installation
 ------------
-This fork consists of the original files + Dockerfile, docker-compose.yml and samplicate.sh. The latter 3 files are the only on necessary to run it.
+This fork consists of the original files + Dockerfile, docker-compose.yml and samplicate-run.sh. The latter 3 files are the only on necessary to run it.
 
 USAGE
 -----
-First edit samplicate.sh according to your needs (examples in file) and edit the Dockerfile or docker-compose.yml to map samplicate.sh to where you placed it (see Dockerfile or docker-compose.yml). Please note that it is necessary to use the -f (fork) switch in each command if you are going to use multiple commands. Optionally you may map a config file also, and run that.
+First edit samplicate.sh according to your needs (examples in file) and edit the Dockerfile or docker-compose.yml to map samplicate.sh to where you placed it (see Dockerfile or docker-compose.yml). Please note that it is necessary to use the -f (fork) switch in each command if you are going to use multiple commands. Optionally you may map a config file also, and run that - example is found in samplicate-run.sh
 
 
 
