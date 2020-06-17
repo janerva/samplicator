@@ -11,8 +11,12 @@ This fork consists of the original files + Dockerfile, docker-compose.yml and sa
 
 USAGE
 -----
-First edit samplicate.sh according to your needs (examples in file) and edit the Dockerfile or docker-compose.yml to map samplicate.sh to where you placed it (see Dockerfile or docker-compose.yml). Please note that it is necessary to use the -f (fork) switch in each command if you are going to use multiple commands. Optionally you may map a config file also, and run that - example is found in samplicate-run.sh
+First edit samplicate-run.sh according to your needs (examples in file). Please note that it is necessary to use the -f (fork) switch in each command if you are going to use multiple commands. Optionally you may map a config file also, and run that - example is found in samplicate-run.sh
 
+Then either edit docker-compose.yml to map samplicate-run.sh to where you placed it - or use the following command (change /path/to/samplicate-run.sh and exposed port(s)):
+```
+$ docker run -d --net=host -v /path/to/samplicate-run.sh:/opt/samplicate-run.sh --expose 514/udp --expose 2055/udp janerva/samplicator
+```
 
 
 The usage convention for the program is
