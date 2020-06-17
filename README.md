@@ -7,7 +7,7 @@ This small program receives UDP datagrams on a given port, and resends those dat
 
 INSTALLATION
 ------------
-This fork consists of the original files + Dockerfile, docker-compose.yml and samplicate-run.sh. The latter 3 files are the only ones necessary to run it.
+This fork of Dockerfile, docker-compose.yml and samplicate-run.sh. The latter 3 files are the only ones necessary to run it.
 
 USAGE
 -----
