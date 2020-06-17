@@ -11,7 +11,7 @@ This fork consists of the original files + Dockerfile, docker-compose.yml and sa
 
 USAGE
 -----
-First edit samplicate-run.sh according to your needs (examples in file). Please note that it is necessary to use the -f (fork) switch in each command if you are going to use multiple commands. Optionally you may map a config file also, and run that - example is found in samplicate-run.sh
+First edit samplicate-run.sh according to your needs (examples in file). Please note that it is necessary to use the -f (fork) switch in each command if you are going to use multiple commands, **but the last command should always be without the -f (fork) switch or else the container will exit straight away**. Optionally you may map a config file also, and run that - example is found in samplicate-run.sh.
 
 Then either edit docker-compose.yml to map samplicate-run.sh to where you placed it - or use the following command (change /path/to/samplicate-run.sh and exposed port(s)):
 ```
