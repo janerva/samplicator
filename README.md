@@ -7,7 +7,7 @@ This small program receives UDP datagrams on a given port, and resends those dat
 
 INSTALLATION
 ------------
-This fork consists of the original files + Dockerfile, docker-compose.yml and samplicate-run.sh. The latter 3 files are the only on necessary to run it.
+This fork consists of the original files + Dockerfile, docker-compose.yml and samplicate-run.sh. The latter 3 files are the only ones necessary to run it.
 
 USAGE
 -----
@@ -15,7 +15,7 @@ First edit samplicate-run.sh according to your needs (examples in file). Please 
 
 Then either edit docker-compose.yml to map samplicate-run.sh to where you placed it - or use the following command (change /path/to/samplicate-run.sh and exposed port(s)):
 ```
-$ docker run -d --net=host -v /path/to/samplicate-run.sh:/opt/samplicate-run.sh --expose 514/udp --expose 2055/udp janerva/samplicator
+$ docker run -d --restart unless-stopped --net=host -v /path/to/samplicate-run.sh:/opt/samplicate-run.sh --expose 514/udp --expose 2055/udp janerva/samplicator
 ```
 
 

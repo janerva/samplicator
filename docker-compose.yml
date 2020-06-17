@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  samplicator:
+    image: janerva/samplicator
+    container_name: samplicator
+    restart: 'unless-stopped'
+
+    # Please expose your ports according to your needs here - edit accordingly - must match what is in samplicate-run.sh
+    ports:
+      - "514:514/udp"
+      - "2055:2055/udp"
+
+    network_mode: "host"
+
+    # Please expose the path to samplicate-run.sh
+    volumes:
+      - "/path/to/samplicate-run.sh:/opt/samplicate-run.sh:ro"
+      # Here you can expose a config file if needed
+      - "/path/to/config.file:/opt/config.file:ro"
+
+    # Start the service
+    entrypoint: "/opt/samplicate-run.sh"
